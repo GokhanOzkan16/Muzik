@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gokhan Playlist</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="player">
+  <div class="container">
+    <main class="card">
+      <header class="header">
+        <div>
+          <h1>Playlist</h1>
+          <p class="sub">Sadece oynat ve yonet. Muzik ekleme ayri sayfada.</p>
+        </div>
+        <a class="btn primary" href="add.html">Muzik Ekle Sayfasi</a>
+      </header>
+
+      <section class="layout">
+        <article class="panel">
+          <audio id="audioPlayer"></audio>
+          <p id="nowPlaying" class="now">Playlist bos.</p>
+
+          <div class="controls">
+            <button id="prevBtn" class="secondary" type="button">Onceki</button>
+            <button id="playPauseBtn" class="primary" type="button">Cal</button>
+            <button id="nextBtn" class="secondary" type="button">Sonraki</button>
+          </div>
+
+          <div class="row">
+            <input id="seekBar" type="range" min="0" max="100" value="0" />
+            <div class="time-row">
+              <span id="currentTime">00:00</span>
+              <span id="totalTime">00:00</span>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="removeCurrentBtn" class="danger" type="button">Secili Parcayi Sil</button>
+            <button id="clearBtn" class="danger" type="button">Playlisti Temizle</button>
+          </div>
+
+          <div class="hidden-youtube">
+            <div id="youtubePlayer"></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3 style="margin:0;">Parcalar</h3>
+          <ul id="playlistList"></ul>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

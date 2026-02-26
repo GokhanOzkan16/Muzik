@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muzik Ekle - Gokhan Playlist</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="add">
+  <div class="container">
+    <main class="card">
+      <header class="header">
+        <div>
+          <h1>Muzik Ekleme</h1>
+          <p class="sub">MP3, YouTube ve manuel link ekleme islemleri burada.</p>
+        </div>
+        <a class="btn secondary" href="index.html">Playliste Don</a>
+      </header>
+
+      <section class="layout">
+        <article class="panel">
+          <div class="row">
+            <label class="btn primary" for="fileInput">+ MP3 Sec</label>
+            <input id="fileInput" type="file" accept="audio/*" multiple />
+          </div>
+
+          <div class="row inline">
+            <input id="youtubeInput" type="text" placeholder="YouTube linki" />
+            <button id="addYoutubeBtn" class="secondary" type="button">YouTube Ekle</button>
+          </div>
+          <div class="row">
+            <input id="youtubeName" type="text" placeholder="Opsiyonel: Muzik adi (bos birakirsan sorulur)" />
+          </div>
+
+          <div class="row" style="margin-top:8px;">
+            <input id="manualUrlInput" type="text" placeholder="Direkt MP3 linki (https://...mp3)" />
+            <input id="manualUrlName" type="text" placeholder="Opsiyonel: Muzik adi (bos birakirsan sorulur)" />
+            <button id="addUrlBtn" class="secondary" type="button">Linkten MP3 Ekle</button>
+            <div id="manualStatus" class="sub">JukeHost girisi kaldirildi. Linkleri manuel ekleyebilirsin.</div>
+          </div>
+
+          <div class="row" style="margin-top:16px;">
+            <button id="clearBtn" class="danger" type="button">Tum Playlisti Temizle</button>
+            <p class="sub">Toplam parca: <span id="totalCount">0</span></p>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3 style="margin:0;">Mevcut Playlist</h3>
+          <p class="sub">Isim otomatik alinamazsa eklerken senden ad sorulur.</p>
+          <ul id="playlistList"></ul>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
